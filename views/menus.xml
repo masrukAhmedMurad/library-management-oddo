@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <menuitem id="spark_assessment_menu_root"
+              name=" Spark Program"
+              sequence="1"/>
+
+
+    <menuitem id="spark_assessment_menu_assessment"
+              name="Assessment "
+              parent="spark_assessment_menu_root"
+              action="spark_first_assessment.spark_assessment_info_action"
+              sequence="1"/>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_spark_assessment,manage_spark_assessment,model_spark_assessment,,1,1,1,1
+access_library_member,manage_library_member,model_library_member,,1,1,1,1
+access_library_book,manage_library_book,model_library_book,,1,1,1,1
+access_library_transaction,manage_library_transaction,model_library_transaction,,1,1,1,1

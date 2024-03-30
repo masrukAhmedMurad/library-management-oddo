@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <record id="spark_assessment_info_tree" model="ir.ui.view">
+        <field name="name">spark.assessment.tree</field>
+        <field name="model">spark.assessment</field>
+        <field name="arch" type="xml">
+            <tree string="Spark Assessment Information">
+                <field name="name"/>
+                <field name="email"/>
+                <field name="description"/>
+                <field name="date"/>
+                <field name="marks"/>
+                <field name="total_participant"/>
+                <field name="program_start_time"/>
+                <field name="program_end_time"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="spark_assessment_info_form" model="ir.ui.view">
+        <field name="name">spark.assessment.form</field>
+        <field name="model">spark.assessment</field>
+        <field name="arch" type="xml">
+            <form string="Spark Assessment Information">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="description"/>
+                            <field name="date"/>
+
+                        </group>
+                        <group>
+                            <field name="marks"/>
+                            <field name="total_participant"/>
+                            <field name="program_start_time"/>
+                            <field name="program_end_time"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+     <record id="spark_assessment_info_search" model="ir.ui.view">
+        <field name="name">spark.assessment.search</field>
+        <field name="model">spark.assessment</field>
+        <field name="arch" type="xml">
+            <tree string="Spark Assessment Information">
+                <field name="name"/>
+                <field name="email"/>
+
+            </tree>
+        </field>
+    </record>
+
+
+
+
+
+
+    <record id="spark_assessment_info_action" model="ir.actions.act_window">
+        <field name="name">Spark Assessment Information</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">spark.assessment</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

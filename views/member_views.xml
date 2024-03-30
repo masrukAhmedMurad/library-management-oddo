@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_library_member_form" model="ir.ui.view">
+            <field name="name">library.member.form</field>
+            <field name="model">library.member</field>
+            <field name="arch" type="xml">
+                <form string="Library Member">
+                    <sheet>
+                        <header>
+                            <h1>
+                                <field name="priority" widget="priority"/>
+                            </h1>
+                        </header>
+                            <group>
+                           <group>
+                                <field name="memberID"/>
+                            <field name="name"/>
+                            <field name="gender"/>
+                            <field name="role"/>
+                           </group>
+
+
+                               <group>
+                                    <field name="department"/>
+                            <field name="email"/>
+                            <field name="phone"/>
+                            <field name="status"/>
+                               </group>
+                            </group>
+
+
+
+                    </sheet>
+                    <notebook>
+    <page string="Page 1" name="page1">
+        <!-- Fields for page 1 -->
+    </page>
+    <page string="Page 2" name="page2">
+        <!-- Fields for page 2 -->
+    </page>
+</notebook>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_library_member_tree" model="ir.ui.view">
+            <field name="name">library.member.tree</field>
+            <field name="model">library.member</field>
+            <field name="arch" type="xml">
+                <tree string="Library Members">
+                    <field name="name"/>
+                    <field name="gender"/>
+                    <field name="role"/>
+                    <field name="department"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_library_member" model="ir.actions.act_window">
+            <field name="name">Library Members</field>
+            <field name="res_model">library.member</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a new library member.
+                </p>
+            </field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="menu_library_member"
+                  name="Library Members"
+                  sequence="30"/>
+        <menuitem id="menu_library_member_list"
+                  name="Members List"
+                  parent="menu_library_member"
+                  action="action_library_member"/>
+    </data>
+</odoo>
