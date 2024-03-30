@@ -11,11 +11,10 @@
     'depends': ['base'],
     'data': [
         'security/ir.model.access.csv',
-        'views/spark_assessment_views.xml',
         'views/member_views.xml',
         'views/transaction_views.xml',
         'views/book_views.xml',
-        'views/menus.xml',
+
 
     ],
     'installable': True,
