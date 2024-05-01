@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+<record id="action_library_member" model="ir.actions.act_window">
+            <field name="name">Library Member</field>
+            <field name="res_model">library.member</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+
+                    Click to add a new library book.
+
+                </p>
+            </field>
+        </record>
+
+
+
+    <menuitem id="root_member"
+              name="My Library"
+              sequence="2"/>
+
+    <menuitem id="member_child"
+              name="Member"
+              parent="root_member"
+              sequence="2"/>
+
+    <menuitem id="member_details"
+              name="member details"
+              parent="member_child"
+              action="action_library_member"
+              sequence="2"/>
+
+
+</odoo>
