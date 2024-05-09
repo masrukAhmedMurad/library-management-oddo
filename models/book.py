@@ -3,6 +3,7 @@ from odoo import models, fields
 class LibraryBook(models.Model):
     _name = 'library.book'
     _description = 'Book in the University Library'
+    _rec_name = 'name'
 
     name = fields.Char(string='Title', required=True)
     author = fields.Char(string='Author')
@@ -26,3 +27,5 @@ class LibraryBook(models.Model):
     ], string='Genre')
     page_count = fields.Integer(string='Page Count')
     copy_count = fields.Integer(string='Number of Copies', default=1)
+
+    member_id=fields.Many2one("library.member",string="member")

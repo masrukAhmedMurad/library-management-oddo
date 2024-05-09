@@ -14,6 +14,8 @@
         'views/member_views.xml',
         'views/transaction_views.xml',
         'views/book_views.xml',
+        'views/female_member.xml',
+
 
 
     ],

@@ -13,34 +13,51 @@
                                 <field name="priority" widget="priority"/>
                             </h1>
                         </header>
+
+                        <group>
                             <group>
-                           <group>
                                 <field name="memberID"/>
-                            <field name="name"/>
-                            <field name="gender"/>
-                            <field name="role"/>
-                           </group>
-
-
-                               <group>
-                                    <field name="department"/>
-                            <field name="email"/>
-                            <field name="phone"/>
-                            <field name="status"/>
-                               </group>
+                                <field name="name"/>
+                                <field name="gender"/>
+                                <field name="role"/>
                             </group>
 
+
+                            <group>
+
+                                <field name="hide_author" groups="base.group_no_one"/>
+                                <field name="department"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="status"/>
+                            </group>
+                        </group>
 
 
                     </sheet>
                     <notebook>
-    <page string="Page 1" name="page1">
-        <!-- Fields for page 1 -->
-    </page>
-    <page string="Page 2" name="page2">
-        <!-- Fields for page 2 -->
-    </page>
-</notebook>
+                        <page string="Page 1" name="page1">
+                            <!-- Fields for page 1 -->
+                        </page>
+                        <page string="Page 2" name="page2">
+                            <!-- Fields for page 2 -->
+                            <field name="book_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="author" attrs="{'invisible': [('parent.hide_author', '=', True)]}"/>
+                                    <field name="description"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="name"/>
+                                        <field name="author"
+                                               attrs="{'invisible': [('parent.hide_author', '=', True)]}"/>
+                                        <field name="description"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </page>
+                    </notebook>
                 </form>
             </field>
         </record>

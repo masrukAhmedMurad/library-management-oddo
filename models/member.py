@@ -39,3 +39,6 @@ class LibraryMember(models.Model):
     email = fields.Char(string='Email')
     phone = fields.Char(string='Phone')
     status = fields.Selection([('active', 'Active'), ('inactive', 'Inactive')], string='Status', default='active')
+
+    book_ids = fields.One2many("library.book","member_id",string="books")
+    hide_author=fields.Boolean(string="hide author");
