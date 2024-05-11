@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_library_member,manage_library_member,model_library_member,,1,1,1,1
+access_member_tag,manage_member_tag,model_member_tag,,1,1,1,1
+access_library_member_cancel,manage_library_member_cancel,model_library_member_cancel,,1,1,1,1

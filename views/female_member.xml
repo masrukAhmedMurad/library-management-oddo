@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+
+
+    <record id="action_female_member" model="ir.actions.act_window">
+        <field name="name">Library Member</field>
+        <field name="res_model">library.member</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'default_gender':'Female'}</field>
+        <field name="domain">['|',('gender','=','Female'),('age','&lt;=',5)]</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+
+                Click to add a new library book.
+
+            </p>
+        </field>
+    </record>
+
+
+
+    <menuitem id="female_member"
+              name="female member"
+              parent="member_child"
+              action="action_female_member"
+              sequence="2"/>
+
+
+</odoo>

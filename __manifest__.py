@@ -11,8 +11,11 @@
     'depends': [],
     'data': [
         'security/ir.model.access.csv',
+        'wizard/cancel_member_view.xml',
         'views/menu.xml',
         'views/member_views.xml',
+        'views/female_member.xml',
+        'views/member_tag_views.xml',
     ],
     'installable': True,
     'application': True,
